@@ -11,7 +11,7 @@ class Pokedex {
             .then((data) => {
                 let pokemonData = createPokedexLog(data);
                 this.contents = this.contents.concat(pokemonData);
-                console.log('line 14');
+                //console.log('line 14');
                 return pokemonData;
             });
         // .then((pokemon) => console.log(pokemon.name));
@@ -23,7 +23,7 @@ class Pokedex {
     }
 
     all() {
-        console.log(this.contents);
+        //console.log(this.contents);
         return this.contents.map((pokemon) => pokemon.name);
     }
 }

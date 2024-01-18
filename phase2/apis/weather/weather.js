@@ -14,6 +14,11 @@ class Weather{
     getWeatherData(){
         return this.weatherData;
     }
+
+    compareWith(city2){
+        city1Temp = this.weatherData.main.temp
+        console.log(city1Temp);
+    }
 }
 
 module.exports = Weather;
