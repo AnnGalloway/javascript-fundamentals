@@ -5,7 +5,8 @@ const port = 3000;
 const thermostat = new Thermostat();
 
 app.get('/temperature', (req,res) => {
-    res.send(`Current temperature is: ${thermostat.getTemperature()}`)
+    //res.send(JSON.stringify(thermostat.getTemperature()))
+    res.send(`Current Temperature is: ${thermostat.getTemperature()}`)
 })
 
 app.post('/up', (req,res) => {
