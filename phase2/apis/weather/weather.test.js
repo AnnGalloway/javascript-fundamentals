@@ -19,8 +19,9 @@ describe('unit tests for weather class', () => {
         mockClient.fetchWeatherData.mockResolvedValueOnce({
             name: 'Bristol',
         });
-        return weather.load('Bristol').then(() =>{
-            expect(weather.getWeatherData().name).toEqual('Bristol');
+        const weather2 = new Weather(mockClient)
+        return weather2.load('Bristol').then(() =>{
+            expect(weather2.getWeatherData().name).toEqual('Bristol');
         });
     })
 })
